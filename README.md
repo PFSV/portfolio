@@ -1,12 +1,14 @@
-# Portfolio — Applied LLM / VLM Research & Engineering
+# Portfolio — Hyeonseop Yoon (윤현섭)
 
-Applied NLP/ML researcher–engineer. I take large language and vision-language models
-from research into production for Korean enterprise: **retrieval-augmented QA, embeddings,
-fine-tuning & quantization, vision-language serving, and on-device health sensing** —
-trained and served on a shared **H100 SLURM** cluster.
+**Applied LLM / VLM researcher–engineer with a cognitive-neuroscience background.**
+My research roots are in comparing how *brains* and *language models* process meaning
+(metaphor, reasoning); today I take large language and vision-language models from research
+into production for Korean enterprise: **retrieval-augmented QA, embeddings, fine-tuning &
+quantization, vision-language serving, and on-device health sensing** — trained and served
+on a shared **H100 SLURM** cluster.
 
-> Affiliations: Korea University · maum.ai  
-> Hugging Face: [@hyunseop](https://huggingface.co/hyunseop) · GitHub: [@PFSV](https://github.com/PFSV)
+> 🎓 Korea University · 🧠 ex-Seoul National University (Brain & Cognitive Science) · 🏢 maum.ai  
+> [ORCID 0009-0000-0905-4337](https://orcid.org/0009-0000-0905-4337) · Hugging Face [@hyunseop](https://huggingface.co/hyunseop) · GitHub [@PFSV](https://github.com/PFSV) · ✉️ xianxie31@korea.ac.kr
 
 Client engagements below are described by **industry** rather than name — the underlying
 code stays in private repos. Public research artifacts (papers, Hugging Face models) are linked directly.
@@ -25,6 +27,24 @@ code stays in private repos. Public research artifacts (papers, Hugging Face mod
 | [Vision-language models](projects/vision-language-models.md) | VLM experiments & serving (LLaVA-NeXT, Qwen-VL, Gemma) on Open WebUI | LLaVA-NeXT, Qwen, Slurm serving | Research + demos |
 | [Call-center audio analytics](projects/call-center-audio-analytics.md) | Speaker-diarized call transcripts → LLM summaries & Q&A extraction | WhisperX, gpt-oss-20b, diarization | Delivered pipeline |
 | [Real-time functional imaging / neurofeedback](projects/neurofeedback-rtfin.md) | Neurolinguistics + real-time functional imaging research collaboration | embedding tuning, signal ML | Research (rtFIN-NL) |
+| [Brain × language models (research)](projects/brain-and-language-research.md) | Cognitive-neuroscience studies of metaphor & reasoning in brains vs. NLP models | fMRI/EEG analysis, NLP, deep learning | 3 papers, 3 best-paper awards |
+
+---
+
+## 🎓 Research & publications
+
+Award-winning cognitive-neuroscience research at the intersection of the human brain and
+language models — the foundation the applied work is built on. Full write-up:
+**[Brain × language models](projects/brain-and-language-research.md)**.
+
+| Year | Work | Venue | Recognition |
+|---|---|---|---|
+| 2024 | *Metaphor in Mind and Machine* ([doi](https://doi.org/10.52294/001c.120592)) | OHBM 2024 (Aperture Neuro) | 🏆 Best Paper poster — Max Planck Institute for Human Cognitive & Brain Sciences |
+| 2023 | *Comparative Analysis of Brain and NLP Models for Reasoning Tasks* | Brain Engineering Society of Korea | 🏆 Best Paper poster (NeuroImage & AI) |
+| 2022 | *Korean Twitter Bot Detection based on Deep Learning* | Korea Software Congress (KIISE) | 🏆 Best Paper (Language Technology) |
+
+**Research positions:** Seoul National University — Brain & Cognitive Science (2023–24) ·
+Korea University — Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/) (2022–23).
 
 ---
 
@@ -41,8 +61,11 @@ photoplethysmography (rPPG/PhysNet), synthetic-data sim-to-real.
 quantization, Hugging Face ecosystem, Weights & Biases, Docker Compose, Spring Boot +
 Postgres/pgvector backends, on-device Core ML deployment.
 
+**Cognitive neuroscience** — neuroimaging (fMRI/EEG) analysis, brain–language alignment,
+metaphor & reasoning studies comparing neural and NLP representations.
+
 **Research** — honest evaluation design (leakage auditing), reproducible benchmarks,
-academic writing (EMNLP-style).
+peer-reviewed academic writing (3 publications, 3 best-paper awards).
 
 ---
 

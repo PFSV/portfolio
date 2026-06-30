@@ -7,7 +7,7 @@ into production for Korean enterprise: **retrieval-augmented QA, embeddings, fin
 quantization, vision-language serving, and on-device health sensing** — trained and served
 on a shared **H100 SLURM** cluster.
 
-> 🎓 Korea University · 🧠 ex-Seoul National University (Brain & Cognitive Science) · 🗣️ Hankuk Univ. of Foreign Studies (English Linguistics & Language Technology) · 🏢 maum.ai  
+> 🎓 Seoul National University (Computer Science & Engineering · Brain & Cognitive Science) · Korea University (Brain & Cognitive Engineering) · 🏢 maum.ai  
 > [ORCID 0009-0000-0905-4337](https://orcid.org/0009-0000-0905-4337) · Hugging Face [@hyunseop](https://huggingface.co/hyunseop) · GitHub [@PFSV](https://github.com/PFSV) · ✉️ xianxie31@korea.ac.kr
 
 Client engagements below are described by **industry** rather than name — the underlying
@@ -43,9 +43,8 @@ language models — the foundation the applied work is built on. Full write-up:
 | 2023 | *Comparative Analysis of Brain and NLP Models for Reasoning Tasks* | Brain Engineering Society of Korea | 🏆 Best Paper poster (NeuroImage & AI) |
 | 2022 | *Korean Twitter Bot Detection based on Deep Learning* | Korea Software Congress (KIISE) | 🏆 Best Paper (Language Technology) |
 
-**Background:** Hankuk Univ. of Foreign Studies — English Linguistics & Language Technology
-(linguistics/NLP roots) → Korea University — Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/)
-(2022–23) → Seoul National University — Brain & Cognitive Science (2023–24) → maum.ai (applied LLM).
+**Background:** Seoul National University — Computer Science & Engineering and Brain & Cognitive
+Science · Korea University — Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/) · maum.ai (applied LLM).
 
 ---
 

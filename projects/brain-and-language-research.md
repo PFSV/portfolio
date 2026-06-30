@@ -1,12 +1,12 @@
 # Brain × Language Models — Cognitive-Neuroscience Research
 
 **Role:** researcher (first / co-author) · **Output:** 3 peer-reviewed papers, 3 best-paper awards
-**Where:** Hankuk Univ. of Foreign Studies (English Linguistics & Language Technology) · Korea University (Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/)) · Seoul National University (Brain & Cognitive Science)
+**Where:** Seoul National University (Computer Science & Engineering · Brain & Cognitive Science) · Korea University (Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/))
 
 The research foundation behind the applied LLM work: studying how **human brains** and
 **artificial language models** represent and process meaning. The trajectory runs
-*linguistics → brain-vs-NLP comparison → applied LLM* — which is exactly why the production
-work cares so much about grounding, faithfulness, and honest evaluation.
+*cognitive neuroscience → brain-vs-NLP comparison → applied LLM* — which is exactly why the
+production work cares so much about grounding, faithfulness, and honest evaluation.
 
 ---
 

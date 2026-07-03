@@ -3,9 +3,7 @@
 **Applied NLP / AI Researcher with a cognitive-neuroscience background.**
 My research roots are in comparing how *brains* and *language models* process meaning
 (metaphor, reasoning); today I take large language / NLP models from research
-into production for Korean enterprise: **retrieval-augmented QA, embeddings, fine-tuning &
-quantization, and on-device health sensing** — trained and served
-on a shared **H100 SLURM** cluster.
+into production for Korean enterprise: **retrieval-augmented QA, embeddings, fine-tuning & quantization** — trained and served on a shared **H100 SLURM** cluster. Vision-language and on-device health sensing (vision-cardio) are side projects.
 
 > 🎓 Seoul National University (Computer Science & Engineering · Brain & Cognitive Science) · Korea University (Brain & Cognitive Engineering) · 🏢 maum.ai  
 > [ORCID 0009-0000-0905-4337](https://orcid.org/0009-0000-0905-4337) · Hugging Face [@hyunseop](https://huggingface.co/hyunseop) · GitHub [@PFSV](https://github.com/PFSV) · ✉️ xianxie31@korea.ac.kr

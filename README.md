@@ -1,10 +1,10 @@
 # Portfolio — Hyeonseop Yoon (윤현섭)
 
-**Applied LLM / VLM researcher–engineer with a cognitive-neuroscience background.**
+**Applied NLP / AI Researcher with a cognitive-neuroscience background.**
 My research roots are in comparing how *brains* and *language models* process meaning
-(metaphor, reasoning); today I take large language and vision-language models from research
+(metaphor, reasoning); today I take large language / NLP models from research
 into production for Korean enterprise: **retrieval-augmented QA, embeddings, fine-tuning &
-quantization, vision-language serving, and on-device health sensing** — trained and served
+quantization, and on-device health sensing** — trained and served
 on a shared **H100 SLURM** cluster.
 
 > 🎓 Seoul National University (Computer Science & Engineering · Brain & Cognitive Science) · Korea University (Brain & Cognitive Engineering) · 🏢 maum.ai  

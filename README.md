@@ -3,7 +3,7 @@
 I am an Applied NLP / AI researcher building grounded, evidence-driven language systems.
 My current work spans retrieval, evaluation, model adaptation, and serving; earlier research on how brains and language models represent meaning informs how I think about grounding and faithful evaluation.
 
-[GitHub profile](https://github.com/PFSV) · [Personal site](https://pfsv.github.io/) · [Hugging Face](https://huggingface.co/hyunseop) · [ORCID](https://orcid.org/0009-0000-0905-4337) · [Email](mailto:xianxie31@korea.ac.kr)
+[GitHub profile](https://github.com/PFSV) · [Hugging Face](https://huggingface.co/hyunseop) · [ORCID](https://orcid.org/0009-0000-0905-4337) · [Email](mailto:xianxie31@korea.ac.kr)
 
 Client work is described only at a method-and-outcome level. Proprietary code, data, infrastructure details, and client identities are not published.
 

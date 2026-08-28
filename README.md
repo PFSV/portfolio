@@ -44,6 +44,10 @@ I have research experience at Seoul National University and Korea University; th
 
 [Methods, authorship, and recognition details](projects/brain-and-language-research.md)
 
+## Open-source release
+
+[`pycag`](https://github.com/PFSV/cag) packages a Cache-Augmented Generation workflow for Llama-family models: corpus consolidation, reusable KV-cache prefill, and single or batch query CLIs. It is an alpha research utility available from [PyPI](https://pypi.org/project/pycag/); its README documents the hardware trade-offs, update cost, and lack of automatic citations.
+
 ## Additional selected experience
 
 | Area | Scope | Evidence available here |

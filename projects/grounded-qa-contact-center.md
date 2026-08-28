@@ -1,6 +1,6 @@
 # Verified-Unit Grounded QA for AI Contact Centers
 
-**Role:** lead researcher & engineer · **Output:** EMNLP-track paper ("GroundLM") + retrieval/eval pipeline · **Status:** in revision
+**Role:** lead researcher & engineer · **Output:** working manuscript ("GroundLM") + retrieval/eval pipeline · **Status:** manuscript in revision; no acceptance claimed
 
 ## Problem
 Enterprise AI contact centers can't afford fabricated answers. A customer-facing bot that
@@ -39,6 +39,12 @@ Honest measurement is the contribution as much as the system is.
 ## Stack
 Python · BM25/SPLADE · BAAI/bge-m3 (official) · sentence-transformers · MTEB-style eval ·
 LLM-judge (gpt-4o-mini with deterministic fallbacks) · SLURM H100 (offline HF cache) · LaTeX (Tectonic).
+
+## Evidence and availability
+
+The method, evaluation design, and sanitized results are documented here. The working manuscript,
+raw evaluation data, and production code are not public, so this is a case study rather than a
+reproducible open-source release. Public claims should be read within that limitation.
 
 ## Confidentiality
 Built over real enterprise contact-center logs from two domains (automotive & home-appliance).

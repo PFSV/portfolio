@@ -2,6 +2,8 @@
 
 **Role:** end-to-end (data → model → Core ML → iOS app) · **Output:** iOS app + Core ML model + sim-to-real study
 
+[Public code](https://github.com/PFSV/vision-cardio) · [Model](https://huggingface.co/hyunseop/vision-cardio-rppg)
+
 ## Problem
 Estimate heart rate from a **front-facing camera** (remote photoplethysmography, rPPG) and
 turn it into useful, *bounded* wellness guidance — entirely **on-device**, with no wearable,
@@ -23,6 +25,14 @@ no diagnosis claims, and no hidden background camera use.
 - Honest UX constraints baked into the state machine (`idle → ready → capturing → analyzing →
   coaching / deferred`): wellness-only language, explicit permission, confidence-gated output.
 - Full vertical slice: dataset engineering → training (W&B-tracked) → Core ML export → shipping app.
+
+## Evidence and limits
+
+With a strict participant split, the documented UBFC validation heart-rate MAE improved from
+**5.63 to 2.80 bpm** after fine-tuning. This is validation evidence for a research prototype,
+not a clinical-performance claim or proof of generalization across all cameras, skin tones,
+motion, lighting conditions, or populations. Source datasets remain governed by their owners
+and are not redistributed in the public repository.
 
 ## Stack
 PyTorch (PhysNet) · SCAMPS / UBFC-rPPG datasets · Core ML / coremltools · iOS · Swift · Weights & Biases.

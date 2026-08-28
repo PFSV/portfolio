@@ -10,8 +10,8 @@ for the domain and language, with **measured** retrieval quality — not vibes.
 Fine-tuned two strong base encoders on an H100 SLURM flow and published both, with full
 benchmark artifacts on the model cards:
 
-- 🤗 **[`hyunseop/rtfin-bge-m3-ko-h100`](https://huggingface.co/hyunseop)** — based on `dragonkue/BGE-m3-ko`
-- 🤗 **[`hyunseop/rtfin-qwen3-embedding-h100`](https://huggingface.co/hyunseop)** — based on `Qwen/Qwen3-Embedding-4B`
+- 🤗 **[`hyunseop/rtfin-bge-m3-ko-h100`](https://huggingface.co/hyunseop/rtfin-bge-m3-ko-h100)** — based on `dragonkue/BGE-m3-ko`
+- 🤗 **[`hyunseop/rtfin-qwen3-embedding-h100`](https://huggingface.co/hyunseop/rtfin-qwen3-embedding-h100)** — based on `Qwen/Qwen3-Embedding-4B`
 
 ## Results
 
@@ -35,3 +35,9 @@ benchmark artifacts on the model cards:
 ## Stack
 sentence-transformers · BGE-M3 / Qwen3-Embedding · MTEB / MIRACL · AutoRAG · SLURM H100 ·
 Hugging Face Hub · Weights & Biases.
+
+## Availability and limits
+
+The checkpoints and model-card results are public through the links above. Training data and
+enterprise corpora are not redistributed. The reported AutoRAG numbers describe the documented
+720-item, 114-query evaluation and should not be treated as universal Korean retrieval quality.

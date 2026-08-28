@@ -1,76 +1,70 @@
-# Portfolio — Hyeonseop Yoon (윤현섭)
+# Hyeonseop Yoon — Selected Work
 
-**Applied NLP / AI Researcher with a cognitive-neuroscience background.**
-My research roots are in comparing how *brains* and *language models* process meaning
-(metaphor, reasoning); today I take large language / NLP models from research
-into production for Korean enterprise: **retrieval-augmented QA, embeddings, fine-tuning & quantization** — trained and served on a shared **H100 SLURM** cluster. Vision-language and on-device health sensing (vision-cardio) are side projects.
+I am an Applied NLP / AI researcher building grounded, evidence-driven language systems.
+My current work spans retrieval, evaluation, model adaptation, and serving; earlier research on how brains and language models represent meaning informs how I think about grounding and faithful evaluation.
 
-> 🎓 Seoul National University (Computer Science & Engineering · Brain & Cognitive Science) · Korea University (Brain & Cognitive Engineering) · 🏢 maum.ai  
-> [ORCID 0009-0000-0905-4337](https://orcid.org/0009-0000-0905-4337) · Hugging Face [@hyunseop](https://huggingface.co/hyunseop) · GitHub [@PFSV](https://github.com/PFSV) · ✉️ xianxie31@korea.ac.kr
+[GitHub profile](https://github.com/PFSV) · [Personal site](https://pfsv.github.io/) · [Hugging Face](https://huggingface.co/hyunseop) · [ORCID](https://orcid.org/0009-0000-0905-4337) · [Email](mailto:xianxie31@korea.ac.kr)
 
-Client engagements below are described by **industry** rather than name — the underlying
-code stays in private repos. Public research artifacts (papers, Hugging Face models) are linked directly.
+Client work is described only at a method-and-outcome level. Proprietary code, data, infrastructure details, and client identities are not published.
 
----
+## Flagship work
 
-## Featured work
+### 1. Grounded QA for enterprise contact centers
 
-| Project | One line | Stack | Status |
-|---|---|---|---|
-| [Grounded QA for AI contact centers](projects/grounded-qa-contact-center.md) | "Verified-unit" RAG that answers from operator-approved units or abstains — non-fabrication by construction | BM25/SPLADE/dense hybrid, BGE-M3, faithfulness judging | EMNLP-track paper (in revision) |
-| [Korean retrieval embeddings](projects/korean-retrieval-embeddings.md) | Fine-tuned BGE-M3-ko & Qwen3-Embedding-4B for Korean retrieval, published to HF | sentence-transformers, MTEB/MIRACL, AutoRAG | **2 public HF models** |
-| [On-device rPPG heart-rate coach](projects/on-device-rppg.md) | Front-camera heart rate → bounded workout coaching, fully on-device | PhysNet, Core ML, iOS/Swift, SCAMPS sim-to-real | iOS app + Core ML export |
-| [Enterprise RAG agents & chatbots](projects/enterprise-rag-agents.md) | Production RAG/agent chatbots across insurance, rail, appliances | Spring Boot, RAGFlow, Postgres/pgvector, vLLM | Multiple PoCs delivered |
-| [LLM fine-tuning & quantization](projects/llm-finetuning-quantization.md) | Domain SFT/ORPO of Gemma-class models + FP8 quant for serving | axolotl, LoRA, FP8, SLURM H100 | Production fine-tunes |
-| [Vision-language models](projects/vision-language-models.md) | VLM experiments & serving (LLaVA-NeXT, Qwen-VL, Gemma) on Open WebUI | LLaVA-NeXT, Qwen, Slurm serving | Research + demos |
-| [Call-center audio analytics](projects/call-center-audio-analytics.md) | Speaker-diarized call transcripts → LLM summaries & Q&A extraction | WhisperX, gpt-oss-20b, diarization | Delivered pipeline |
-| [Real-time functional imaging / neurofeedback](projects/neurofeedback-rtfin.md) | Neurolinguistics + real-time functional imaging research collaboration | embedding tuning, signal ML | Research (rtFIN-NL) |
-| [Brain × language models (research)](projects/brain-and-language-research.md) | Cognitive-neuroscience studies of metaphor & reasoning in brains vs. NLP models | fMRI/EEG analysis, NLP, deep learning | 3 papers, 3 best-paper awards |
+- **Problem:** A customer-facing QA system must not invent policy or product details.
+- **Contribution:** Designed a verified-unit architecture that returns an operator-approved answer or abstains, and built the retrieval and evaluation harness.
+- **Evidence:** An evaluation audit uncovered question-identity leakage that had inflated an early result by roughly 8×. After rebuilding the held-out evaluation, hybrid retrieval with query augmentation reports approximately **R@1 0.881–0.930**.
+- **Artifact:** [Method, evaluation design, and limitations](projects/grounded-qa-contact-center.md)
 
----
+### 2. Korean retrieval embeddings
 
-## 🎓 Research & publications
+- **Problem:** Korean enterprise retrieval needs measured domain and language adaptation, not an assumption that fine-tuning always helps.
+- **Contribution:** Fine-tuned two public encoders and evaluated them with AutoRAG and MIRACL-style retrieval workflows.
+- **Evidence:** On the documented AutoRAG evaluation (720 corpus items, 114 queries), the BGE-M3 variant reports **MRR 0.7773**, **Hit@1 0.6754**, and **Hit@10 0.9474**. The project also records a case where the base model generalized better, and the fine-tuned model was not used.
+- **Artifacts:** [BGE-M3 model](https://huggingface.co/hyunseop/rtfin-bge-m3-ko-h100) · [Qwen3 model](https://huggingface.co/hyunseop/rtfin-qwen3-embedding-h100) · [Case study](projects/korean-retrieval-embeddings.md)
 
-Award-winning cognitive-neuroscience research at the intersection of the human brain and
-language models — the foundation the applied work is built on. Full write-up:
-**[Brain × language models](projects/brain-and-language-research.md)**.
+### 3. VisionCardio — on-device rPPG
 
-| Year | Work | Venue | Recognition |
-|---|---|---|---|
-| 2024 | *Metaphor in Mind and Machine* ([doi](https://doi.org/10.52294/001c.120592)) | OHBM 2024 (Aperture Neuro) | 🏆 Best Paper poster — Max Planck Institute for Human Cognitive & Brain Sciences |
-| 2023 | *Comparative Analysis of Brain and NLP Models for Reasoning Tasks* | Brain Engineering Society of Korea | 🏆 Best Paper poster (NeuroImage & AI) |
-| 2022 | *Korean Twitter Bot Detection based on Deep Learning* | Korea Software Congress (KIISE) | 🏆 Best Paper (Language Technology) |
+- **Problem:** Estimate heart rate from front-camera video while keeping capture and inference on-device and deferring when signal quality is insufficient.
+- **Contribution:** Built the data and training pipeline, Core ML export, and SwiftUI application.
+- **Evidence:** With a strict participant split, fine-tuning reduced the documented UBFC heart-rate MAE from **5.63 to 2.80 bpm**. The repository includes code, a tagged release, and an MIT license.
+- **Artifacts:** [Code and reproducibility notes](https://github.com/PFSV/vision-cardio) · [Model](https://huggingface.co/hyunseop/vision-cardio-rppg) · [Case study](projects/on-device-rppg.md)
 
-**Background:** Seoul National University — Computer Science & Engineering and Brain & Cognitive
-Science · Korea University — Brain & Cognitive Engineering / [BSPL](https://bspl-ku.github.io/) · maum.ai (applied LLM).
+## Research foundation
 
----
+My earlier work examined metaphor, reasoning, and representational alignment between human neural data and NLP models. This is the origin of the questions that continue through the applied work: what evidence supports a system's output, what does a representation preserve, and when should a system decline to answer?
 
-## Skills
+I have research experience at Seoul National University and Korea University; these were research roles, not degree programs.
 
-**LLM / NLP** — RAG (hybrid retrieval, query expansion, reranking), embeddings & retrieval
-eval (MTEB, MIRACL, AutoRAG), faithfulness/grounding, SFT/ORPO fine-tuning, prompt &
-agent design, Korean NLP (tokenization, domain adaptation).
+| Year | Publication | Venue |
+|---|---|---|
+| 2024 | [*Metaphor in Mind and Machine*](https://doi.org/10.52294/001c.120592) | OHBM 2024 / *Aperture Neuro* |
+| 2023 | *Comparative Analysis of Brain and NLP Models for Reasoning Tasks* | Brain Engineering Society of Korea |
+| 2022 | [*Korean Twitter Bot Detection based on Deep Learning*](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224455) | Korea Software Congress (KIISE) |
 
-**Vision / multimodal** — vision-language models (LLaVA-NeXT, Qwen-VL), remote
-photoplethysmography (rPPG/PhysNet), synthetic-data sim-to-real.
+[Methods, authorship, and recognition details](projects/brain-and-language-research.md)
 
-**Systems / MLOps** — SLURM H100 clusters, vLLM / Ollama / Open WebUI serving, FP8
-quantization, Hugging Face ecosystem, Weights & Biases, Docker Compose, Spring Boot +
-Postgres/pgvector backends, on-device Core ML deployment.
+## Additional selected experience
 
-**Cognitive neuroscience** — neuroimaging (fMRI/EEG) analysis, brain–language alignment,
-metaphor & reasoning studies comparing neural and NLP representations.
+| Area | Scope | Evidence available here |
+|---|---|---|
+| [Enterprise RAG agents](projects/enterprise-rag-agents.md) | Retrieval, orchestration, and serving for enterprise engagements | Sanitized case study |
+| [LLM fine-tuning and quantization](projects/llm-finetuning-quantization.md) | Domain adaptation and serving experiments on shared H100 infrastructure | Sanitized case study |
+| [Vision-language models](projects/vision-language-models.md) | Multimodal model evaluation and serving experiments | Sanitized case study |
+| [Call-center audio analytics](projects/call-center-audio-analytics.md) | Diarization, transcription, summarization, and structured extraction | Sanitized case study |
 
-**Research** — honest evaluation design (leakage auditing), reproducible benchmarks,
-peer-reviewed academic writing (3 publications, 3 best-paper awards).
+These entries are supporting experience rather than public, reproducible releases. Claims are intentionally limited to information that can be shared without exposing client data or internal systems.
 
----
+## Working principles
 
-## A note on rigor
+- Evaluate on splits that match the intended claim.
+- Treat leakage discovery and negative results as useful outcomes.
+- Link claims to code, model cards, papers, or explicit evaluation protocols.
+- Prefer an abstention path when available evidence is insufficient.
+- Keep private client work separate from public demonstrations.
 
-The grounded-QA project includes a worked example of catching an **8×-inflated retrieval
-result** caused by question-identity leakage in an indexing scheme, and rebuilding the
-headline on a non-leaky held-out evaluation. Honest measurement is a feature here, not an afterthought.
+## Technical scope
 
-_Last updated: 2026-06-30._
+`Python` · `PyTorch` · `Hugging Face` · `sentence-transformers` · `BM25/SPLADE/dense retrieval` · `RAG evaluation` · `vLLM` · `LoRA/ORPO` · `Docker` · `Postgres/pgvector` · `SLURM/H100` · `Core ML`
+
+Last reviewed: 2026-08-28.

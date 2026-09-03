@@ -38,11 +38,17 @@ I have research experience at Seoul National University and Korea University; th
 
 | Year | Publication | Venue |
 |---|---|---|
+| 2026 | [*Staged Linguistic Seeding: Grounded Query Expansion for Verified-Unit QA in AI Contact Centers*](https://arxiv.org/abs/2609.00844) | GroundLM Workshop at EMNLP 2026 |
 | 2024 | [*Metaphor in Mind and Machine*](https://doi.org/10.52294/001c.120592) | OHBM 2024 / *Aperture Neuro* |
 | 2023 | *Comparative Analysis of Brain and NLP Models for Reasoning Tasks* | Brain Engineering Society of Korea |
 | 2022 | [*Korean Twitter Bot Detection based on Deep Learning*](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11224455) | Korea Software Congress (KIISE) |
 
 [Methods, authorship, and recognition details](projects/brain-and-language-research.md)
+
+## Academic service
+
+- **Reviewer**, Grounding Language Models (GroundLM) Workshop at EMNLP 2026
+- **Reviewer**, Vision-Language Models for Real-World Deployment (VLM4RWD) Workshop at NeurIPS 2026
 
 ## Open-source release
 
@@ -71,4 +77,4 @@ These entries are supporting experience rather than public, reproducible release
 
 `Python` · `PyTorch` · `Hugging Face` · `sentence-transformers` · `BM25/SPLADE/dense retrieval` · `RAG evaluation` · `vLLM` · `LoRA/ORPO` · `Docker` · `Postgres/pgvector` · `SLURM/H100` · `Core ML`
 
-Last reviewed: 2026-08-28.
+Last reviewed: 2026-09-03.

@@ -1,6 +1,6 @@
 # Verified-Unit Grounded QA for AI Contact Centers
 
-**Role:** lead researcher & engineer · **Output:** working manuscript ("GroundLM") + retrieval/eval pipeline · **Status:** manuscript in revision; no acceptance claimed
+**Role:** first author, lead researcher & engineer · **Output:** accepted workshop paper + retrieval/eval pipeline · **Status:** accepted to the GroundLM Workshop at EMNLP 2026; [arXiv:2609.00844](https://arxiv.org/abs/2609.00844)
 
 ## Problem
 Enterprise AI contact centers can't afford fabricated answers. A customer-facing bot that
@@ -26,7 +26,7 @@ Correctness of *retrieval* is still required, but the system can never invent te
   on held-out human query variants.
 - A faithfulness result showing the verified-unit design's non-fabrication advantage over
   free-form RAG.
-- Framed as an **industry / application** contribution (EMNLP Industry Track / Findings).
+- Accepted as an **application study** at the Grounding Language Models (GroundLM) Workshop at EMNLP 2026.
 
 ## What makes it interesting: catching our own leakage
 An earlier headline reported retrieval R@1 ≈ 0.86–0.90 under a "tuple-index" scheme. On audit,
@@ -42,9 +42,10 @@ LLM-judge (gpt-4o-mini with deterministic fallbacks) · SLURM H100 (offline HF c
 
 ## Evidence and availability
 
-The method, evaluation design, and sanitized results are documented here. The working manuscript,
-raw evaluation data, and production code are not public, so this is a case study rather than a
-reproducible open-source release. Public claims should be read within that limitation.
+The paper is public on [arXiv](https://arxiv.org/abs/2609.00844). The method, evaluation design,
+and sanitized results are documented here. Raw evaluation data and production code are not public,
+so this remains a case study rather than a reproducible open-source release. Public claims should
+be read within that limitation.
 
 ## Confidentiality
 Built over real enterprise contact-center logs from two domains (automotive & home-appliance).
